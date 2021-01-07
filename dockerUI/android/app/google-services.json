@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237813058469",
+    "project_id": "docker-ui-app",
+    "storage_bucket": "docker-ui-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237813058469:android:0311b4cfb2d4a05560f64c",
+        "android_client_info": {
+          "package_name": "com.dockerUI.dockerUI"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237813058469-vb3q9qhfign48lln9e1g9kj2m63psmlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYkjikVmfkNnYtnV6YHo7s-xe6kwjQ7Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237813058469-vb3q9qhfign48lln9e1g9kj2m63psmlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
