@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyLog extends StatefulWidget {
   @override
@@ -11,7 +11,6 @@ class _MyLogState extends State<MyLog> {
   var authc = FirebaseAuth.instance;
   String email;
   String password;
-  bool sspin = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,20 +107,30 @@ class _MyLogState extends State<MyLog> {
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                     onPressed: () async {
-                      setState(() {
-                        sspin = true;
-                      });
                       try {
                         var userSignIn = await authc.signInWithEmailAndPassword(
                             email: email, password: password);
                         print(userSignIn);
                         if (userSignIn != null) {
-                          setState(() {
-                            sspin = false;
-                          });
                           Navigator.pushNamed(context, "dockerlist");
+                          Fluttertoast.showToast(
+                         msg: "Login Successfull",
+                         toastLength: Toast.LENGTH_SHORT,
+                         gravity: ToastGravity.BOTTOM,
+                         timeInSecForIosWeb: 10,
+                         backgroundColor: Colors.blue,
+                        textColor: Colors.white,
+                         fontSize: 16.0);
                         }
                       } catch (e) {
+                        Fluttertoast.showToast(
+                         msg: "Login Unsuccessfull",
+                         toastLength: Toast.LENGTH_SHORT,
+                         gravity: ToastGravity.BOTTOM,
+                         timeInSecForIosWeb: 10,
+                         backgroundColor: Colors.blue,
+                        textColor: Colors.white,
+                         fontSize: 16.0);
                         print(e);
                       }
                     },

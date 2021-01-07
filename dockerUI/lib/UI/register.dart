@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyReg extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class MyReg extends StatefulWidget {
 class _MyRegState extends State<MyReg> {
   var authc = FirebaseAuth.instance;
   String email;
-
+ 
   String password;
 
   @override
@@ -115,10 +116,28 @@ class _MyRegState extends State<MyReg> {
                             email: email, password: password);
                         print(user);
                         if (user.additionalUserInfo.isNewUser == true) {
+                          Fluttertoast.showToast(
+                         msg: "Register Successfull",
+                         toastLength: Toast.LENGTH_SHORT,
+                         gravity: ToastGravity.BOTTOM,
+                         timeInSecForIosWeb: 10,
+                         backgroundColor: Colors.blue,
+                        textColor: Colors.white,
+                         fontSize: 16.0);
                           Navigator.pushNamed(context, "login");
                         }
                       } catch (e) {
                         print(e);
+
+                        Fluttertoast.showToast(
+                         msg: "Register Unsuccessfully",
+                         toastLength: Toast.LENGTH_SHORT,
+                         gravity: ToastGravity.BOTTOM,
+                         timeInSecForIosWeb: 10,
+                         backgroundColor: Colors.blue,
+                        textColor: Colors.white,
+                         fontSize: 16.0);
+                          Navigator.pushNamed(context, "login");
                       }
                     },
                   ),
