@@ -11,7 +11,7 @@ class _MySplashState extends State<MySplash> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 20,
+      seconds: 4,
       navigateAfterSeconds: AfterSplash(),
       title: Text(
         "Welcome To Docker App",

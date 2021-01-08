@@ -8,22 +8,10 @@ class MyDocker extends StatefulWidget {
 class _MyDockerState extends State<MyDocker> {
   var details = [
     {
-      'title': 'Running Container',
-      'subtitle': 'check docker running container',
-      'image': 'assets/docker_container.jpg',
-      'routing': 'DCrunning',
-    },
-    {
-      'title': 'Start Container',
-      'subtitle': 'start a stopped container',
-      'image': 'assets/docker_container.jpg',
-      'routing': 'DCstart',
-    },
-    {
-      'title': 'Stop Container',
-      'subtitle': 'Stop the running container',
-      'image': 'assets/docker_container.jpg',
-      'routing': 'DCstop',
+      'title': 'pull image from docker hub',
+      'subtitle': 'pull the image from the docke hub',
+      'image': 'assets/docker_image.jpg',
+      'routing': 'DIpull',
     },
     {
       'title': 'Docker Images',
@@ -38,10 +26,28 @@ class _MyDockerState extends State<MyDocker> {
       'routing': 'DClaunch',
     },
     {
-      'title': 'pull image from docker hub',
-      'subtitle': 'pull the image from the docke hub',
-      'image': 'assets/docker_image.jpg',
-      'routing': 'DIpull',
+      'title': 'Running Container',
+      'subtitle': 'check docker running container',
+      'image': 'assets/docker_container.jpg',
+      'routing': 'DCrunning',
+    },
+    {
+      'title': 'Container Exec',
+      'subtitle': 'Run any command inside docker container',
+      'image': 'assets/docker_container.jpg',
+      'routing': 'DCexec',
+    },
+    {
+      'title': 'Stop Container',
+      'subtitle': 'Stop the running container',
+      'image': 'assets/docker_container.jpg',
+      'routing': 'DCstop',
+    },
+    {
+      'title': 'Stopped Container',
+      'subtitle': 'See all the stopped conatiner at server',
+      'image': 'assets/docker_container.jpg',
+      'routing': 'DCstopped',
     },
     {
       'title': 'Remove docker container',
@@ -56,16 +62,10 @@ class _MyDockerState extends State<MyDocker> {
       'routing': 'DIremove',
     },
     {
-      'title': 'Stopped Container',
-      'subtitle': 'See all the stopped conatiner at server',
+      'title': 'Start Container',
+      'subtitle': 'start a stopped container',
       'image': 'assets/docker_container.jpg',
-      'routing': 'DCstopped',
-    },
-    {
-      'title': 'Container Exec',
-      'subtitle': 'Run any command inside docker container',
-      'image': 'assets/docker_container.jpg',
-      'routing': 'DCexec',
+      'routing': 'DCstart',
     },
   ];
 
